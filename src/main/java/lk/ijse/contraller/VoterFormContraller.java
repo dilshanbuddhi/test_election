@@ -11,6 +11,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lk.ijse.QrGenerator.GenerateQr;
 import lk.ijse.Utill.Regex;
 import lk.ijse.model.Voter;
 import lk.ijse.model.tm.VoterTm;
@@ -122,9 +123,11 @@ public class VoterFormContraller {
 
                     boolean isSaved = VoterRepo.regiVoter(voter, eid);
                     if (isSaved) {
+                        GenerateQr.setData(id,eid,gmail,name);
                         //loadtbl();
                         getVIdlistAsElection();
                         ClearField();
+
                         new Alert(Alert.AlertType.CONFIRMATION, "Voter Saved !!").show();
                     } else {
                         new Alert(Alert.AlertType.ERROR, "voter not saved").show();
