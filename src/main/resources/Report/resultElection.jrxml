@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="resultElection" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2482f3cc-3abd-4e7c-98f1-659c30fe8b3f">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (3)"/>
+	<parameter name="electionId" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+    R.e_id,
+    R.vote_count,
+    R.c_id,
+    E.e_name AS election_name,
+    C.c_name AS candidate_name,
+    P.p_name AS party_name
+FROM
+    Result R
+JOIN
+    Election E ON R.e_id = E.e_id
+JOIN
+    Candidate C ON R.c_id = C.c_id
+JOIN
+    Party P ON C.p_id = P.p_id
+    WHERE
+    R.e_id = $P{electionId}
+   
+ORDER BY
+    R.vote_count DESC;]]>
+	</queryString>
+	<field name="e_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="e_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="e_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="result"/>
+	</field>
+	<field name="vote_count" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="vote_count"/>
+		<property name="com.jaspersoft.studio.field.label" value="vote_count"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="result"/>
+	</field>
+	<field name="c_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="c_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="c_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="result"/>
+	</field>
+	<field name="election_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="e_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="election_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="election"/>
+	</field>
+	<field name="candidate_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="c_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="candidate_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="candidate"/>
+	</field>
+	<field name="party_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="p_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="party_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="party"/>
+	</field>
+	<group name="e_id">
+		<groupExpression><![CDATA[$F{e_id}]]></groupExpression>
+	</group>
+	<group name="vote_count">
+		<groupExpression><![CDATA[$F{vote_count}]]></groupExpression>
+	</group>
+	<group name="c_id">
+		<groupExpression><![CDATA[$F{c_id}]]></groupExpression>
+	</group>
+	<group name="election_name">
+		<groupExpression><![CDATA[$F{election_name}]]></groupExpression>
+	</group>
+	<group name="candidate_name">
+		<groupExpression><![CDATA[$F{candidate_name}]]></groupExpression>
+	</group>
+	<group name="party_name">
+		<groupExpression><![CDATA[$F{party_name}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="177" splitType="Stretch">
+			<staticText>
+				<reportElement x="170" y="-10" width="320" height="30" forecolor="#0B0933" uuid="502e0f03-ed09-4be9-86a3-5e3d0c52c810"/>
+				<textElement>
+					<font fontName="Serif" size="22"/>
+				</textElement>
+				<text><![CDATA[RESULT OF ELECTION]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="252" y="20" width="129" height="35" forecolor="#030000" uuid="401e4240-c93d-4173-884d-813bfe869341"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{election_name}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="475" y="-10" width="100" height="30" uuid="84768355-512c-4080-93c5-247d18bbcd76"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="-20" y="-20" width="160" height="110" uuid="c2983201-3c39-4c94-81d7-385c4132b261"/>
+				<imageExpression><![CDATA["C:/Users/Public/Documents/ijse/test_election/src/main/resources/icon/Screenshot 2024-05-14 125319.png"]]></imageExpression>
+			</image>
+			<rectangle radius="11">
+				<reportElement x="10" y="109" width="534" height="50" forecolor="#E6E6E6" backcolor="#EDEDED" uuid="571bccc4-3e2c-40ec-b2f9-8cea1f44c32e"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="20" y="110" width="510" height="49" uuid="41b62f40-7225-4aac-8cb5-e078f13d8dfb"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Comprehensive Report on the Election Results Including Voter Turnout,      Candidate Performance, and Certified Outcome by the Electoral Commission for Transparent and Fair Democratic Process]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="98" splitType="Stretch">
+			<rectangle radius="13">
+				<reportElement x="-11" y="40" width="592" height="50" forecolor="#EDB8B7" backcolor="#32346B" uuid="76e5160c-7568-4268-bdef-5beaeee73db9"/>
+			</rectangle>
+			<image>
+				<reportElement x="116" y="40" width="50" height="50" uuid="da25449a-7e8b-4c65-9bce-ca61d4623c99"/>
+				<imageExpression><![CDATA["C:/Users/Buddhi/Downloads/graph.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="186" y="50" width="220" height="40" forecolor="#FFFFFF" uuid="60572e4a-ffba-4a4e-845b-7c063dad8051"/>
+				<textElement>
+					<font fontName="Arial Black" size="20"/>
+				</textElement>
+				<text><![CDATA[All Result details here ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="91" y="19" width="140" height="30" forecolor="#12112B" uuid="0446c1c7-c44e-497d-bf07-a634b3965dcb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="05dd4e3e-aa0f-43b6-98c3-644078f5c345"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="3" rightPadding="3"/>
+				<textElement>
+					<font fontName="Sylfaen" size="15"/>
+				</textElement>
+				<text><![CDATA[Candidate Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="19" width="110" height="30" forecolor="#12112B" uuid="a3f0ddb2-62f8-499a-8e26-facfdc9ad2ca">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="195ae4ba-ce0f-4b68-a997-0c88216e7311"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="3" rightPadding="3"/>
+				<textElement>
+					<font fontName="Sylfaen" size="15"/>
+				</textElement>
+				<text><![CDATA[Party Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="19" width="130" height="30" forecolor="#12112B" uuid="762a449e-5d0b-4080-ac5a-7971b0e34c62">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e3ac2860-b248-41b7-9e14-87ef6913da35"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="3" rightPadding="3"/>
+				<textElement>
+					<font fontName="Sylfaen" size="15"/>
+				</textElement>
+				<text><![CDATA[Vote Count]]></text>
+			</staticText>
+			<line>
+				<reportElement x="90" y="17" width="380" height="1" uuid="49f3b7c6-3025-459d-b999-86d0c1da0e8f"/>
+			</line>
+			<line>
+				<reportElement x="90" y="49" width="380" height="1" uuid="adb6ba87-909a-4d61-9701-35924dc5a772"/>
+			</line>
+			<line>
+				<reportElement x="470" y="19" width="1" height="30" uuid="0dadd4a2-9c97-40f3-9172-7b36cd07e6eb"/>
+			</line>
+			<line>
+				<reportElement x="340" y="18" width="1" height="30" uuid="26e1685e-3f8d-4565-a342-0ada93f6da99"/>
+			</line>
+			<line>
+				<reportElement x="230" y="19" width="1" height="30" uuid="be8b9c64-34cc-45bf-a9d9-fa113d4bf4ff"/>
+			</line>
+			<line>
+				<reportElement x="90" y="18" width="1" height="30" uuid="e4e1b471-303d-4c50-9cd4-ccf2c46e4671"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="47" splitType="Stretch">
+			<textField>
+				<reportElement x="90" y="0" width="140" height="30" uuid="d982f645-29c8-45f0-a054-486bc5ec10d3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="05dd4e3e-aa0f-43b6-98c3-644078f5c345"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="3" rightPadding="3"/>
+				<textElement textAlignment="Center">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{candidate_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="0" width="110" height="30" uuid="be1f263f-e9e5-4c76-b5e9-6a25c5fc5ccf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="195ae4ba-ce0f-4b68-a997-0c88216e7311"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="3" rightPadding="3"/>
+				<textElement textAlignment="Center">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{party_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="0" width="130" height="30" uuid="132cfdfb-13b2-4c46-b464-0dfc62fbd93d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e3ac2860-b248-41b7-9e14-87ef6913da35"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="3" rightPadding="3"/>
+				<textElement textAlignment="Center">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vote_count}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="58" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="101" splitType="Stretch">
+			<ellipse>
+				<reportElement x="60" y="33" width="422" height="50" uuid="9c2d1cc5-8363-4e92-a455-e7619bf79314"/>
+			</ellipse>
+			<staticText>
+				<reportElement x="-17" y="40" width="595" height="50" uuid="0370fbb3-d169-4f3b-a7bd-a8b8b3f6f1d1"/>
+				<textElement textAlignment="Center">
+					<font fontName="Palatino Linotype" size="25"/>
+				</textElement>
+				<text><![CDATA[CONGRATULATIONS !!]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="50" splitType="Stretch"/>
+	</summary>
+</jasperReport>

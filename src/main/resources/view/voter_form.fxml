@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="voterAnchorpane" prefHeight="682.0" prefWidth="993.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.contraller.VoterFormContraller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffecf0" height="62.0" layoutX="75.0" layoutY="125.0" stroke="#d4d4d4" strokeType="INSIDE" strokeWidth="3.0" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="315.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e0e1e4" height="168.0" layoutX="56.0" layoutY="217.0" stroke="#d1d1d1" strokeType="INSIDE" strokeWidth="3.0" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="843.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9297a4" height="237.0" layoutX="130.0" layoutY="441.0" stroke="#d4d4d4" strokeType="INSIDE" strokeWidth="3.0" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="727.0" />
+      <ImageView fitHeight="30.0" fitWidth="41.0" layoutX="434.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/broom.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="idtxt" layoutX="103.0" layoutY="255.0" onAction="#SearchOnEnterButtun" onKeyReleased="#idTxtOnKeyReleased" prefHeight="26.0" prefWidth="206.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="nametxt" layoutX="100.0" layoutY="331.0" onKeyReleased="#nameTxtOnKeyReleased" prefHeight="26.0" prefWidth="206.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="addresstxt" layoutX="398.0" layoutY="255.0" onKeyReleased="#addressTxtOnKeyReleased" prefHeight="26.0" prefWidth="187.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="agetxt" layoutX="652.0" layoutY="255.0" onKeyReleased="#ageTxtOnKeyReleased" prefHeight="26.0" prefWidth="169.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <Text layoutX="101.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Full Name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="103.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID Number">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="652.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="395.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="398.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Of Birth">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="484.0" layoutY="398.0" mnemonicParsing="false" onAction="#VoterRegisteronAction" prefHeight="31.0" prefWidth="104.0" style="-fx-background-color: #12E952; -fx-background-radius: 10;" text="Register +" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="856.0" layoutY="401.0" mnemonicParsing="false" onAction="#VoterDeleteOnAction" prefHeight="31.0" prefWidth="74.0" style="-fx-background-color: #FF0000; -fx-background-radius: 10;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="629.0" layoutY="401.0" mnemonicParsing="false" onAction="#VoterSearchOnAction" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: #0C82C4; -fx-background-radius: 10;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="427.0" layoutY="139.0" mnemonicParsing="false" onAction="#clearOnAction" opacity="0.47" prefHeight="30.0" prefWidth="66.0" style="-fx-background-color: #0CC2C4; -fx-background-radius: 10;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="740.0" layoutY="401.0" mnemonicParsing="false" onAction="#VoterUpdateOnAction" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: #6898F4; -fx-background-radius: 10;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <ComboBox fx:id="cmbElection" layoutX="212.0" layoutY="142.0" onAction="#cmbElectionOnAction" prefWidth="150.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></ComboBox>
+      <Label layoutX="89.0" layoutY="144.0" text="Select Election :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Line endX="884.0000610351562" endY="-1.52587890625E-5" layoutX="109.0" layoutY="202.0" startX="-107.99998474121094" strokeWidth="2.0" />
+      <Text layoutX="651.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gmail Address ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="gmailtxt" layoutX="649.0" layoutY="329.0" onKeyReleased="#gmailTxtOnKeyReleased" prefHeight="26.0" prefWidth="242.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <Text fill="RED" layoutX="212.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="**Requered election !!">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Text>
+      <Button layoutX="865.0" layoutY="31.0" mnemonicParsing="false" onAction="#BackOnAction" prefHeight="26.0" prefWidth="51.0" style="-fx-background-color: #122e4b; -fx-background-radius: 10;" text="back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Hyperlink layoutX="782.0" layoutY="148.0" onAction="#AddExistingVoter" text="Already added voter ??">
+         <font>
+            <Font size="16.0" />
+         </font></Hyperlink>
+      <DatePicker fx:id="datepicker" layoutX="395.0" layoutY="331.0" prefHeight="26.0" prefWidth="187.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></DatePicker>
+      <TableView fx:id="votertable" layoutX="149.0" layoutY="461.0" prefHeight="206.0" prefWidth="694.0" style="-fx-background-color: #9297a4;">
+        <columns>
+          <TableColumn fx:id="idclm" prefWidth="136.00000381469727" text="ID Number" />
+            <TableColumn fx:id="nameclm" prefWidth="138.40000915527344" text="Full Name" />
+            <TableColumn fx:id="ageclm" prefWidth="138.40000915527344" text="Age" />
+          <TableColumn fx:id="dobclm" prefWidth="138.40000915527344" text="Date Of Birth" />
+            <TableColumn fx:id="addressclm" prefWidth="138.40000915527344" text="Address" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c8d5e1" height="37.0" layoutX="215.0" layoutY="26.0" stroke="WHITE" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="557.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </Rectangle>
+      <Text fill="#535151" layoutX="405.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add voters to Election">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="29.0" fitWidth="35.0" layoutX="722.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/refresh.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="83.0" fitWidth="143.0" layoutX="37.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/Screenshot%202024-05-14%20125319.png" />
+         </image>
+      </ImageView>
+      <Text fill="#122e4b" layoutX="169.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Voters">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

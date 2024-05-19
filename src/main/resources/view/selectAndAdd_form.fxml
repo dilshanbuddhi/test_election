@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorepane" prefHeight="682.0" prefWidth="993.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.contraller.SelectAndAddFormContraller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9297a4" height="328.0" layoutX="771.0" layoutY="90.0" stroke="#d4d4d4" strokeType="INSIDE" strokeWidth="3.0" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="223.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9297a4" height="268.0" layoutX="89.0" layoutY="430.0" stroke="#d4d4d4" strokeType="INSIDE" strokeWidth="3.0" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="816.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e0e1e4" height="124.0" layoutX="63.0" layoutY="207.0" stroke="#d1d1d1" strokeType="INSIDE" strokeWidth="3.0" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="670.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e0e1e4" height="77.0" layoutX="41.0" layoutY="153.0" stroke="#d1d1d1" strokeType="INSIDE" strokeWidth="3.0" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="670.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c8d5e1" height="37.0" layoutX="233.0" layoutY="30.0" stroke="WHITE" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="557.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </Rectangle>
+      <TextField fx:id="idSearchtxt" layoutX="67.0" layoutY="180.0" onAction="#SearchabdDelectOnEnterButtun" onKeyReleased="#vidOnKeyrelesed" promptText="Search from NIC">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Button layoutX="229.0" layoutY="179.0" mnemonicParsing="false" onAction="#SearchOnButtonAction" style="-fx-background-color: #6898F4; -fx-background-radius: 15;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="598.0" layoutY="362.0" mnemonicParsing="false" onAction="#AcVoterAddonAction" prefHeight="34.0" prefWidth="116.0" style="-fx-background-color: #57D95C; -fx-background-radius: 15;" text="ADD +" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ComboBox fx:id="cmbElection" layoutX="481.0" layoutY="179.0" onAction="#electioncmbOnAction" prefHeight="26.0" prefWidth="175.0" promptText="Select Election">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></ComboBox>
+      <Line endX="791.0000610351562" layoutX="202.0" layoutY="422.0" startX="-202.00001525878906" strokeWidth="2.0" />
+      <Text fill="RED" layoutX="481.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="***requered election !!" />
+      <TableView fx:id="votertable" layoutX="130.0" layoutY="472.0" prefHeight="211.0" prefWidth="749.0" style="-fx-background-color: #9297a4;">
+         <columns>
+            <TableColumn fx:id="idclm" prefWidth="136.00000381469727" text="ID Number" />
+            <TableColumn fx:id="nameclm" prefWidth="207.20001220703125" text="Full Name" />
+            <TableColumn fx:id="ageclm" prefWidth="111.20001220703125" text="Age" />
+            <TableColumn fx:id="addressclm" prefWidth="155.99990844726562" text="Address" />
+            <TableColumn fx:id="dobclm" prefWidth="138.40000915527344" text="Date Of Birth" />
+         </columns>
+      </TableView>
+      <TableView fx:id="addedidtable" layoutX="792.0" layoutY="121.0" prefHeight="276.0" prefWidth="183.0" style="-fx-background-color: #9297a4;">
+        <columns>
+          <TableColumn fx:id="idcolumn" prefWidth="199.199951171875" text="voter ID" />
+        </columns>
+      </TableView>
+      <Text fill="#122e4b" layoutX="133.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Voter Details here &gt;&gt;">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Text>
+      <Text fill="#122e4b" layoutX="792.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Added voters&gt;&gt;">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="858.0" layoutY="35.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="26.0" prefWidth="51.0" style="-fx-background-color: #122e4b; -fx-background-radius: 10;" text="back" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="87.0" layoutY="245.0" text="Full name :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="297.0" text="Age :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="449.0" layoutY="245.0" text="Address :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="414.0" layoutY="292.0" text="Date Of Birth :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="searchingname" layoutX="175.0" layoutY="247.0" textFill="#122e4b">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="searchingage" layoutX="177.0" layoutY="298.0" textFill="#122e4b">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="searchingaddress" layoutX="535.0" layoutY="246.0" textFill="#122e4b">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="searchingDOB" layoutX="533.0" layoutY="293.0" textFill="#122e4b">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="174.0" layoutY="84.0" style="-fx-text-fill: #122E4B;" text="Voter Add" textFill="#122e4b">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="83.0" fitWidth="917.0" layoutX="41.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/Screenshot%202024-05-14%20125319.png" />
+         </image>
+      </ImageView>
+      <Text fill="#535151" layoutX="398.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select And Add Voters">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="29.0" fitWidth="35.0" layoutX="733.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/refresh.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

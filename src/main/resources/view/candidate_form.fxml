@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="ancorepane" prefHeight="682.0" prefWidth="993.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.contraller.CandidateFormContraller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9297a4" height="219.0" layoutX="155.0" layoutY="469.0" stroke="#d4d4d4" strokeType="INSIDE" strokeWidth="3.0" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="650.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e0e1e4" height="121.0" layoutX="67.0" layoutY="331.0" stroke="#d1d1d1" strokeType="INSIDE" strokeWidth="3.0" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="867.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e0e1e4" height="113.0" layoutX="62.0" layoutY="194.0" stroke="#d1d1d1" strokeType="INSIDE" strokeWidth="3.0" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="867.0" />
+      <Label layoutX="92.0" layoutY="353.0" text="ID number :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="cIdtxt" layoutX="195.0" layoutY="351.0" onAction="#searchOnAction" onKeyReleased="#cidOnKeyReleasedAction" prefHeight="26.0" prefWidth="196.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <Text layoutX="573.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="full name :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Text>
+      <TextField fx:id="cNametxt" layoutX="663.0" layoutY="350.0" onKeyReleased="#nameOnKeyReleasedAction" prefHeight="26.0" prefWidth="196.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <Text layoutX="115.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="address :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Text>
+      <TextField fx:id="Caddresstxt" layoutX="195.0" layoutY="409.0" onKeyReleased="#addressOnKeyReleasedAction" prefHeight="26.0" prefWidth="196.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <Text layoutX="80.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="select Party :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Text>
+      <ComboBox fx:id="cmbParty" layoutX="196.0" layoutY="213.0" onAction="#loadTablevaluesOnCmbAction" prefHeight="26.0" prefWidth="178.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></ComboBox>
+      <Button layoutX="528.0" layoutY="406.0" mnemonicParsing="false" onAction="#addOnAction" prefHeight="31.0" prefWidth="96.0" style="-fx-background-color: #57D95C; -fx-background-radius: 15;" text=" Save +" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TextField fx:id="territorryTxt" layoutX="194.0" layoutY="267.0" onKeyReleased="#divisionOnKeyReleasedAction" prefHeight="26.0" prefWidth="184.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <Text layoutX="116.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="division :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Text>
+      <Text layoutX="541.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="select distric :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Text>
+      <ComboBox fx:id="cmbDistric" layoutX="663.0" layoutY="212.0" prefHeight="26.0" prefWidth="196.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></ComboBox>
+      <Button layoutX="903.0" layoutY="28.0" mnemonicParsing="false" onAction="#backtodashboard" style="-fx-background-color: #122e4b;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="819.0" layoutY="406.0" mnemonicParsing="false" onAction="#deleteOnAction" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: #FF0000; -fx-background-radius: 15;" text="delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="685.0" layoutY="406.0" mnemonicParsing="false" onAction="#updateOnAction" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: #6898F4; -fx-background-radius: 15;" text="update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Text fill="RED" layoutX="656.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="** requered distric !!!">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="RED" layoutX="194.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="** requered party !!!">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Text>
+      <Line endX="893.9999389648438" layoutX="101.0" layoutY="317.0" startX="-100.0" strokeWidth="2.0" />
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="684.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/broom.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="684.0" layoutY="275.0" mnemonicParsing="false" onAction="#clearOnAction" opacity="0.51" prefHeight="26.0" prefWidth="62.0" style="-fx-background-color: #0CC2C4; -fx-background-radius: 15;" />
+      <TableView fx:id="candidatetable" layoutX="184.0" layoutY="482.0" prefHeight="200.0" prefWidth="598.0" style="-fx-background-color: #9297a4;">
+        <columns>
+          <TableColumn fx:id="idclm" prefWidth="146.40001678466797" text="ID Number" />
+          <TableColumn fx:id="nameclm" prefWidth="172.0" text="Full Name" />
+            <TableColumn fx:id="addressclm" prefWidth="136.0" text="Address" />
+            <TableColumn fx:id="areaidclm" prefWidth="143.20001220703125" text="Area ID" />
+        </columns>
+      </TableView>
+      <Label layoutX="165.0" layoutY="83.0" style="-fx-text-fill: #122E4B;" text="Add Candidate" textFill="#122e4b">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="83.0" fitWidth="917.0" layoutX="31.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/Screenshot%202024-05-14%20125319.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="39.0" layoutX="-1.0" layoutY="147.0" stroke="#8e8a8a" strokeType="INSIDE" width="996.0" />
+      <Text fill="#122e4b" layoutX="112.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD NEW CANDIDATE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c8d5e1" height="37.0" layoutX="223.0" layoutY="20.0" stroke="WHITE" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="557.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </Rectangle>
+      <Text fill="#535151" layoutX="388.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add candidates to election">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </Text>
+      <ImageView fitHeight="29.0" fitWidth="35.0" layoutX="723.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/refresh.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

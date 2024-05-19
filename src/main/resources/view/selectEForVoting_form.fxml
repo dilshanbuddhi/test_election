@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1259.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.contraller.SelectEForVotingFormContraller">
+   <children>
+      <TextArea accessibleRole="IMAGE_VIEW" editable="false" layoutX="50.0" layoutY="425.0" prefHeight="242.0" prefWidth="357.0" />
+      <TextArea accessibleRole="IMAGE_VIEW" editable="false" layoutX="-1.0" layoutY="253.0" prefHeight="83.0" prefWidth="1282.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9297a4" height="250.0" layoutX="485.0" layoutY="460.0" stroke="#d4d4d4" strokeType="INSIDE" strokeWidth="3.0" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="745.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e0e1e4" height="111.0" layoutX="698.0" layoutY="343.0" strokeType="INSIDE" strokeWidth="3.0" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="350.0">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.08148147910833359" blue="0.08148147910833359" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="39.0" layoutY="181.0" stroke="#8e8a8a" strokeType="INSIDE" width="1280.0" />
+      <Text fx:id="nametxt" layoutX="129.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="election :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Text>
+      <ComboBox fx:id="electioncmb" layoutX="212.0" layoutY="188.0" onAction="#loadTableAsElection" prefHeight="26.0" prefWidth="213.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></ComboBox>
+      <TableView fx:id="tableParty" layoutX="524.0" layoutY="499.0" prefHeight="200.0" prefWidth="679.0" style="-fx-background-color: #9297a4;">
+        <columns>
+          <TableColumn fx:id="partyIDtbl" prefWidth="134.933349609375" text="Party id" />
+          <TableColumn fx:id="partyNametbl" prefWidth="265.0666809082031" text="Party name" />
+            <TableColumn fx:id="partyLeadertbl" prefWidth="278.66668701171875" text="Party leader" />
+        </columns>
+      </TableView>
+      <Button layoutX="778.0" layoutY="370.0" mnemonicParsing="false" onAction="#startVotingOnAction" prefHeight="58.0" prefWidth="197.0" style="-fx-background-color: #122e4b; -fx-background-radius: 15;" text="START VOTING" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Text fill="RED" layoutX="217.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="** requered lelection !!!">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Text>
+      <Button layoutX="1188.0" layoutY="47.0" mnemonicParsing="false" onAction="#backToDashboard" prefHeight="26.0" prefWidth="55.0" style="-fx-background-color: #122e4b; -fx-background-radius: 10;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text fx:id="enametxt" fill="#122e4b" layoutX="542.0" layoutY="493.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="86.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="notice :">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#2b0000" layoutX="154.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Once the election has started, it cannot be reversed. Once the voting is done, you can end the election by entering the password. The election will automatically expire." wrappingWidth="684.801513671875">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Text>
+      <Label layoutX="216.0" layoutY="94.0" style="-fx-text-fill: #122E4B;" text="Start Election" textFill="#122e4b">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="119.0" fitWidth="177.0" layoutX="39.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/Screenshot%202024-05-14%20125319.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c8d5e1" height="37.0" layoutX="336.0" layoutY="41.0" stroke="WHITE" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="557.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </Rectangle>
+      <Text fill="#535151" layoutX="501.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add candidates to election">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="29.0" fitWidth="35.0" layoutX="836.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/refresh.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="82.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rules :">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="67.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* Only eligible individuals can vote or run for office.">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="67.0" layoutY="547.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* Each person can only vote once">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="67.0" layoutY="576.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* Candidates must meet certain requirements.">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="67.0" layoutY="607.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*  No unfair influence or coercion allowed.">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="69.0" layoutY="637.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* Votes are kept private.">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#69cc69" height="29.0" layoutY="-2.0" stroke="WHITE" strokeType="INSIDE" width="1281.0" />
+      <Text fill="WHITE" layoutX="459.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IF YOU START ELECTION, VOTES WILL COUNT AUTOMATICALLY !!!!">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

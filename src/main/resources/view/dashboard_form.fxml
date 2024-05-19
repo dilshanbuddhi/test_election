@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #8ACFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.contraller.DashboardFormContraller">
+   <children>
+      <AnchorPane fx:id="dashAnchorpane" layoutX="275.0" layoutY="21.0" prefHeight="682.0" prefWidth="993.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" layoutX="94.0" layoutY="477.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="542.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.40740740299224854" green="0.7135802507400513" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.8999999761581421" green="0.9516666531562805" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dcdcdc" height="184.0" layoutX="209.0" layoutY="172.0" strokeType="INSIDE" strokeWidth="2.0" style="-fx-arc-height: 30; -fx-arc-width: 30;" width="632.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.4123976528644562" green="0.45346978306770325" blue="0.9052631855010986" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.13333334028720856" green="1.0" blue="0.20555555820465088" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="134.0" layoutX="606.0" layoutY="187.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 39; -fx-arc-width: 39;" width="191.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.4468226134777069" green="0.7684210538864136" blue="0.5004223585128784" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Text fill="#122e4b" layoutX="244.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spark democracy with a click – our e-voting system makes your voice heard effortlessly." wrappingWidth="473.9999999999999">
+               <font>
+                  <Font name="System Italic" size="21.0" />
+               </font>
+            </Text>
+            <Label layoutX="617.0" layoutY="287.0" text="No. of Candidate">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <ToggleButton layoutX="794.0" layoutY="570.0" mnemonicParsing="false" onAction="#VotingOnAction" prefHeight="75.0" prefWidth="186.0" style="-fx-background-color: #122E4B; -fx-background-radius: 20;" text="       voting" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ToggleButton>
+            <Line endX="198.5999755859375" layoutX="361.0" layoutY="446.0" startX="-117.0" strokeWidth="2.0" />
+            <Text layoutX="218.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+               <font>
+                  <Font size="37.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="134.0" layoutX="243.0" layoutY="193.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 39; -fx-arc-width: 39;" width="191.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.2685379981994629" green="0.4343547821044922" blue="0.5894736647605896" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Label layoutX="255.0" layoutY="291.0" text="No. of Voters">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="VoterCount" layoutX="260.0" layoutY="240.0" style="-fx-background-image: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.geometry.Insets?&gt;&lt;?import javafx.scene.control.Label?&gt;&lt;?import javafx.scene.layout.AnchorPane?&gt;&lt;?import javafx.scene.text.Font?&gt;&lt;AnchorPane layoutX=&quot;196.0&quot; layoutY=&quot;82.0&quot; prefHeight=&quot;86.0&quot; prefWidth=&quot;153.0&quot; style=&quot;-fx-background-color: #66c2ff;&quot; xmlns=&quot;http://javafx.com/javafx/21&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot;&gt;   &lt;children&gt;      &lt;Label layoutX=&quot;15.0&quot; layoutY=&quot;59.0&quot; text=&quot;No. of Voters&quot;&gt;         &lt;font&gt;            &lt;Font name=&quot;System Bold Italic&quot; size=&quot;16.0&quot; /&gt;         &lt;/font&gt;      &lt;/Label&gt;      &lt;Label fx:id=&quot;VoterCount&quot; layoutX=&quot;15.0&quot; layoutY=&quot;14.0&quot; text=&quot;15&quot; textFill=&quot;#030000&quot;&gt;         &lt;font&gt;            &lt;Font name=&quot;Franklin Gothic Medium Italic&quot; size=&quot;32.0&quot; /&gt;         &lt;/font&gt;      &lt;/Label&gt;   &lt;/children&gt;   &lt;opaqueInsets&gt;      &lt;Insets /&gt;   &lt;/opaqueInsets&gt;&lt;/AnchorPane&gt;;" textFill="#122e4b">
+               <font>
+                  <Font name="Franklin Gothic Medium Italic" size="32.0" />
+               </font>
+            </Label>
+            <Button layoutX="908.0" layoutY="21.0" mnemonicParsing="false" onAction="#logoutOnAction" style="-fx-background-color: #122E4B;" text="LOG OUT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Label fx:id="candidateCount" layoutX="618.0" layoutY="228.0" textFill="#122e4b">
+               <font>
+                  <Font name="Franklin Gothic Medium Italic" size="32.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="38.0" layoutX="878.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/logout.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="67.0" layoutX="110.0" layoutY="507.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" style="-fx-arc-height: 40; -fx-arc-width: 40;" width="339.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.4123976528644562" green="0.45346978306770325" blue="0.9052631855010986" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="67.0" layoutX="275.0" layoutY="546.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" style="-fx-arc-height: 40; -fx-arc-width: 40;" width="309.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.36666667461395264" green="1.0" blue="0.36666667461395264" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Text layoutX="129.0" layoutY="541.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upcomming Election :">
+               <font>
+                  <Font name="System Italic" size="25.0" />
+               </font>
+            </Text>
+            <Text fx:id="electionNameTxt" layoutX="345.0" layoutY="587.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* No Any Election" wrappingWidth="231.75">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="56.0" fitWidth="47.0" layoutX="811.0" layoutY="585.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/voting%20(1).png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c8d5e1" height="37.0" layoutX="234.0" layoutY="17.0" stroke="WHITE" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="557.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </Rectangle>
+            <Text fill="#535151" layoutX="430.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="dashboard preview">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <ImageView fitHeight="29.0" fitWidth="35.0" layoutX="743.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/refresh.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="119.0" fitWidth="174.0" layoutX="25.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/Screenshot%202024-05-14%20125319.png" />
+               </image>
+            </ImageView>
+            <Text fill="#00b91f" layoutX="17.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Make your own choice">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="720.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" style="-fx-arc-height: 30; -fx-arc-width: 30; -fx-fill: #122E4B;" width="254.0" />
+      <ToggleButton layoutX="78.0" layoutY="589.0" mnemonicParsing="false" onAction="#ManageResultOnAction" prefHeight="53.0" prefWidth="143.0" style="-fx-background-color: #122E4B; -fx-background-radius: 20;" text="Result" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </ToggleButton>
+      <ToggleButton layoutX="94.0" layoutY="483.0" mnemonicParsing="false" onAction="#CanadidateManageOnAction" prefHeight="56.0" prefWidth="156.0" style="-fx-background-color: #122E4B; -fx-background-radius: 20;" text="Candidates" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </ToggleButton>
+      <ToggleButton layoutX="89.0" layoutY="379.0" mnemonicParsing="false" onAction="#partyManageOnAction" prefHeight="51.0" prefWidth="128.0" style="-fx-background-color: #122E4B; -fx-background-radius: 20;" text="Parties" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </ToggleButton>
+      <ToggleButton fx:id="election" layoutX="79.0" layoutY="161.0" mnemonicParsing="false" onAction="#ElectionManageOnAction" prefHeight="71.0" prefWidth="161.0" style="-fx-background-color: #122E4B; -fx-background-radius: 20;" text="Elections" textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </ToggleButton>
+      <ToggleButton fx:id="votertxt" layoutX="94.0" layoutY="272.0" mnemonicParsing="false" onAction="#VotermanageOnAction" prefHeight="67.0" prefWidth="116.0" style="-fx-background-color: #122E4B; -fx-background-radius: 20;" text="Voters" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </ToggleButton>
+      <Text fill="WHITE" layoutX="86.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dilshan">
+         <font>
+            <Font name="System Italic" size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="38.0" fitWidth="52.0" layoutX="31.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/user.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Line endX="128.46665954589844" layoutX="115.0" layoutY="96.0" startX="-110.00001525878906" strokeWidth="3.0" />
+      <ImageView fitHeight="56.0" fitWidth="67.0" layoutX="44.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icons8-elections-64%20(2).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="47.0" layoutX="46.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/voters%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="60.0" layoutX="45.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/political-party.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="88.0" fitWidth="51.0" layoutX="48.0" layoutY="485.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/selected.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="67.0" layoutX="48.0" layoutY="586.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/rankings.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

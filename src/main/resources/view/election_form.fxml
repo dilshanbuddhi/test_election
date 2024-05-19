@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorepane" prefHeight="682.0" prefWidth="993.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.contraller.ElectionFormContraller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e0e1e4" height="168.0" layoutX="66.0" layoutY="410.0" stroke="#d1d1d1" strokeType="INSIDE" strokeWidth="3.0" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="857.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e0e1e4" height="123.0" layoutX="62.0" layoutY="225.0" stroke="#d1d1d1" strokeType="INSIDE" strokeWidth="3.0" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="857.0" />
+      <ImageView fitHeight="26.0" fitWidth="34.0" layoutX="801.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/broom.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="797.0" layoutY="289.0" mnemonicParsing="false" onAction="#ClearonAction" opacity="0.43" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: #0CC2C4; -fx-background-radius: 10;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="102.0" layoutY="240.0" text="Election ID : ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="electionIdiot" layoutX="204.0" layoutY="239.0" prefHeight="22.0" prefWidth="54.0" textFill="#000059">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="160.0" layoutY="426.0" text="Election name : ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="electionNametxt" layoutX="162.0" layoutY="447.0" onKeyReleased="#enameOnKeyReleasedAction" prefHeight="26.0" prefWidth="226.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <Label layoutX="545.0" layoutY="426.0" text="Election type : ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="electionTypetxt" layoutX="544.0" layoutY="450.0" onKeyReleased="#etypeOnKeyReleasedAction" prefHeight="26.0" prefWidth="226.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <Label layoutX="543.0" layoutY="503.0" text="End date : ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="161.0" layoutY="501.0" prefHeight="27.0" prefWidth="86.0" text="Start date  : ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="111.0" layoutY="289.0" text="Location : ">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Button layoutX="718.0" layoutY="611.0" mnemonicParsing="false" onAction="#updateOnAction" prefHeight="37.0" prefWidth="93.0" style="-fx-background-color: #6898F4; -fx-background-radius: 20;" text="update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="882.0" layoutY="613.0" mnemonicParsing="false" onAction="#DeleteonAction" prefHeight="36.0" prefWidth="74.0" style="-fx-background-color: #FF0000; -fx-background-radius: 20;" text="delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="505.0" layoutY="613.0" mnemonicParsing="false" onAction="#AddOnAction" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #57D95C; -fx-background-radius: 20;" text="ADD +" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <ComboBox fx:id="cmbLocation" layoutX="209.0" layoutY="289.0" prefHeight="26.0" prefWidth="191.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></ComboBox>
+      <Button layoutX="428.0" layoutY="289.0" mnemonicParsing="false" onAction="#newlLocation" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #122E4B; -fx-background-radius: 20;" text="  NEW +" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TextField fx:id="searchFromId" layoutX="626.0" layoutY="290.0" onAction="#searchfromIdOnAction" onKeyReleased="#searchingIdOnKeyReleasedAction" promptText="search here from ID">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <Line endX="893.0" endY="-1.52587890625E-5" layoutX="99.0" layoutY="380.0" startX="-100.0" strokeWidth="2.0" />
+      <DatePicker fx:id="stIdpicker" layoutX="161.0" layoutY="527.0" prefHeight="26.0" prefWidth="234.0" style="-fx-background-color: #e0e1e4;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></DatePicker>
+      <DatePicker fx:id="enddatePicker" layoutX="543.0" layoutY="527.0" prefHeight="26.0" prefWidth="225.0" style="-fx-background-color: #e0e1e4;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></DatePicker>
+      <Label layoutX="155.0" layoutY="101.0" style="-fx-text-fill: #122E4B;" text="Election builder" textFill="#122e4b">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="906.0" layoutY="32.0" mnemonicParsing="false" onAction="#backToDashboard" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: #122E4B; -fx-background-radius: 10;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="83.0" fitWidth="917.0" layoutX="21.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/Screenshot%202024-05-14%20125319.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="39.0" layoutX="-2.0" layoutY="175.0" stroke="#8e8a8a" strokeType="INSIDE" width="996.0" />
+      <Text fill="#122e4b" layoutX="111.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CREATE NEW ELECTION">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c8d5e1" height="37.0" layoutX="220.0" layoutY="29.0" stroke="WHITE" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="557.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </Rectangle>
+      <Text fill="#535151" layoutX="449.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Election">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </Text>
+      <ImageView fitHeight="29.0" fitWidth="35.0" layoutX="729.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/refresh.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
